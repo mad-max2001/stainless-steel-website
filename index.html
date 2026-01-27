@@ -122,45 +122,53 @@
   </div>
 </section>
 <!-- CONTACT FORM -->
-<section id="contact" class="contact">
-  <h2>Send Us an Enquiry</h2>
+<section class="contact" id="contact">
+  <h2>Contact Us</h2>
   <p class="contact-subtext">
-    For B2B manufacturing, bulk B2C orders, or general enquiries, fill out the form below.
+    Send us your requirement. We will contact you shortly.
   </p>
 
-  <form class="contact-form">
-
+  <form
+    action="https://formspree.io/f/xojdpewa"
+    method="POST"
+    class="contact-form"
+  >
     <div class="form-group">
-      <input type="text" placeholder="Your Name" required>
+      <input type="text" name="name" placeholder="Your Name" required>
     </div>
 
     <div class="form-group">
-      <input type="tel" placeholder="Mobile Number" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
     </div>
 
     <div class="form-group">
-      <input type="email" placeholder="Email Address">
-    </div>
-
-    <div class="form-group">
-      <select required>
-        <option value="">Select Enquiry Type</option>
-        <option>B2B Manufacturing (Piece Rate)</option>
-        <option>B2C Bulk Order (1000+ pcs)</option>
-        <option>General Enquiry</option>
+      <select name="order_type" required>
+        <option value="">Select Order Type</option>
+        <option value="B2B Manufacturing">B2B Manufacturing</option>
+        <option value="B2C Bulk Order (1000+)">B2C Bulk Order (1000+)</option>
       </select>
     </div>
 
     <div class="form-group">
-      <textarea rows="5" placeholder="Your Message / Requirements" required></textarea>
+      <textarea
+        name="message"
+        rows="4"
+        placeholder="Your Requirement"
+        required></textarea>
     </div>
 
-    <button type="submit" class="submit-btn">
-      Send Enquiry
-    </button>
+    <!-- Optional hidden subject -->
+    <input type="hidden" name="_subject" value="New Enquiry - Manigandan Enterprises">
 
+    <!-- Optional redirect after submit -->
+    <input type="hidden" name="_redirect" value="https://yourusername.github.io/stainless-steel-website/thankyou.html">
+
+    <button type="submit" class="submit-btn">
+      Submit Enquiry
+    </button>
   </form>
 </section>
+
 
 
 <section id="location" class="location">
@@ -218,4 +226,5 @@
 </a>
 
 </body>
+
 </html>
