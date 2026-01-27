@@ -1,0 +1,9 @@
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  document.getElementById("formMsg").innerText =
+    "Thank you! Your message has been sent successfully.";
+  document.getElementById("formMsg").style.color = "green";
+
+  this.reset();
+});
